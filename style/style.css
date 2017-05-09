@@ -1,0 +1,378 @@
+
+body {
+  background-size:cover;
+  margin: 0px;
+   font-family: 'Josefin Sans', sans-serif;
+   font-size:15px;
+   margin:0px;
+
+}
+
+h1 {
+  font-family:'Josefin Sans', sans-serif;
+  font-size: 80px;
+
+  text-align: center;
+  color: #FFAF26;
+  margin:0px;
+}
+span {
+  /*font-family: 'Permanent Marker', cursive;*/
+font-family: 'Architects Daughter', cursive;
+
+  color:black;
+  margin-top: 10px;
+  display: inline;
+
+}
+h3{
+  font-family:'Tangerine', lato;
+  font-size: 30px;
+  font-weight: bold;
+  color:black;
+  margin: 0px;
+}
+h4 {
+  font-family: Lobster, Monospace;
+  font-size: 15px;
+  outline-style: inherit;
+  outline-color: black;
+  outline-width: 100px;
+  text-shadow: 3px 3px black;
+  margin: 0px;
+}
+
+
+
+
+.blue-box{
+  background-color:primary;
+  padding: 20px;
+}
+.marg{
+  margin: 20px;
+  margin-top:500px;
+
+}
+.margTitle2{
+  margin-top:65px;
+
+}
+.pushRight{
+
+}
+
+.important_text {
+  outline-style: inherit;
+  outline-color: black;
+  outline-width: 100px;
+  text-shadow: 3px 3px black;
+  margin: 0px;
+}
+
+
+.glow span {
+  //color: #29ADBA;
+  color: white;
+
+}
+
+.glow span:hover {
+  color: #FFAF26;
+
+}
+
+
+
+
+
+ul{
+  font-size: 30px;
+  font-family: "Quicksand" ;
+  color: black;
+  font-weight: bold;
+}
+h5{
+
+  font-family: Lobster, Monospace;
+  font-size: 40px;
+  color: black;
+  margin: 0px;
+}
+
+.header-cont {
+  width:100%;
+  position:fixed;
+  top:0px;
+  background-color: #F78733;
+  height: 65px;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+  padding: 10px;
+  font-size: 25px;
+  opacity: .93;
+}
+
+#page1 {
+  width:100%;
+  top:0px;
+  background-color: #4ABDAC;
+
+  padding: 400px;
+
+  margin:0px;
+
+}
+#page2{
+  margin: 0px;
+
+  background: url('./images/moejoe.jpg') no-repeat center center fixed;
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover%;
+  padding: 240px;
+    margin:0px;
+}
+.bodyPart2 {
+  width:100%;
+  top:0px;
+  background-color:white;
+
+
+}
+
+#page3 {
+  width:100%;
+  top:0px;
+  background-color:#DFDCE3;
+  height: 600px;
+  left: 0px;
+  top: 0px;
+    margin:0px;
+    padding:50px;
+}
+
+#page4{
+  width:100%;
+  top:0px;
+  background-color:#4ABDAC;
+
+  height: 400px;
+  left: 0px;
+  top: 0px;
+  margin:0px;
+}
+#page4a{
+
+
+  background: url('/images/random1.JPG') no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: 700px 500px;
+padding:200px 225px 200px 225px;
+background-position: left;
+background-color: #4ABDAC;
+  margin:0px;
+
+
+
+
+}
+#page6a{
+
+
+  background: url('/images/random2.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 700px 500px;
+  padding:200px 300px 200px 225px;
+  background-position: right;
+  background-color: #4ABDAC;
+    margin:0px;
+
+
+
+
+
+}
+#page7{
+  background-color:#DFDCE3;
+  margin:0px;
+  padding-top: 20px;
+}
+a {
+  text-decoration: none !important;
+  margin: 0px;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    width: 150px ;
+    height:75px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 20px 10px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: 'Amatic SC',bold;
+}
+
+.button1 {
+background-color: #4CAF50;
+    color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+
+}
+.button1:hover {
+
+
+     background-color: white;
+    color: #FFAF26;
+     border-radius: 10px;
+
+}
+
+.button2 {
+ border: 2px solid #008CBA;
+    background-color: #008CBA;
+    color: white;
+    border-radius: 10px;
+}
+
+.button2:hover {
+ background-color: white;
+  color: #FFAF26;
+    border-radius: 10px;
+
+}
+.buttonShape2 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    width: 150px ;
+    height:75px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 20px 10px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: 'Amatic SC',bold;
+}
+.button3 {
+    border: 2px solid #ff3232;
+    background-color: #ff3232;
+    color: white;
+    border-radius: 10px;
+}
+
+.button3:hover {
+    background-color: white;
+    color: #ff3232;
+    border-radius: 10px;
+}
+
+.textbox {
+  font-color:  white;
+  background-color:#0088cc ;
+  opacity: .8;
+  width: 300px;
+  height: 200px;
+  margin: auto;
+  padding: 40px;
+  margin:10px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+
+
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.boxes {
+    border: 2px solid #0088cc;
+    background-color: #0088cc;
+    color: white;
+    border-radius: 3px;
+}
+
+.boxes:hover {
+    background-color: white;
+    color: #FFAF26;
+    border-radius: 10px;
+}
+
+
+p{
+  font-family: 'Architects Daughter', cursive;
+  font-size: 20px;
+  margin:0px;
+}
+.well{
+  background: #FC4A1A;
+  opacity: .9;
+  padding: 50px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  width: 500px;
+  height:300px;
+  margin: auto;
+
+}
+.socialMediaButtons
+{
+  max-width:   200px;
+  max-height: 200px;
+  margin: 20px;
+  display: inline;
+  margin-bottom: 0px;
+
+}
+.fbLogo{
+  max-width:   170px;
+  max-height: 170px;
+  margin-left: 80px;
+  margin-right: 80px;
+  display: inline;
+  margin-bottom: 0px;
+}
+.youtubeLogo{
+  margin-left: 80px;
+  margin-bottom: 0px;
+  max-width:   185px;
+  max-height: 185px;
+  margin-bottom: 0px;
+}
+.well2{
+  background: #FC4A1A;
+  opacity: .9;
+  padding: 50px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  width: 600px;
+  height:300px;
+  margin: auto;
+
+}
+.glow2 a{
+  //color: ;
+  color:  #FFAF26;
+
+}
+
+.glow2 a :hover {
+  color:#0088cc;
+
+}
