@@ -115,9 +115,15 @@ h5{
 }
 
 #page1 {
+    background: url('/images/BlueWhale.png') no-repeat center center fixed;
   width:100%;
   top:0px;
   background-color: #4ABDAC;
+  -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: 70%;
+   background-position: right;
 
   padding: 400px;
 
@@ -131,7 +137,7 @@ h5{
  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover%;
+  background-size: cover;
   padding: 240px;
     margin:0px;
 }
