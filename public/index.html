@@ -8,6 +8,82 @@
   <meta charset="UTF-8">
   <title>Portfolio</title>
   <link href="/sstyle/style.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.js"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+</script>
+<script>
+$(function() {
+
+  var $window           = $(window),
+      win_height_padded = $window.height() * 1.1,
+      isTouch           = Modernizr.touch;
+
+  if (isTouch) { $('.revealOnScroll').addClass('animated'); }
+
+  $window.on('scroll', revealOnScroll);
+
+  function revealOnScroll() {
+    var scrolled = $window.scrollTop(),
+        win_height_padded = $window.height() * 1.1;
+
+    // Showed...
+    $(".revealOnScroll:not(.animated)").each(function () {
+      var $this     = $(this),
+          offsetTop = $this.offset().top;
+
+      if (scrolled + win_height_padded > offsetTop) {
+        if ($this.data('timeout')) {
+          window.setTimeout(function(){
+            $this.addClass('animated ' + $this.data('animation'));
+          }, parseInt($this.data('timeout'),10));
+        } else {
+          $this.addClass('animated ' + $this.data('animation'));
+        }
+      }
+    });
+    // Hidden...
+   $(".revealOnScroll.animated").each(function (index) {
+      var $this     = $(this),
+          offsetTop = $this.offset().top;
+      if (scrolled + win_height_padded < offsetTop) {
+        $(this).removeClass('animated fadeInUp flipInX lightSpeedIn')
+      }
+    });
+  }
+
+  revealOnScroll();
+});
+</script>
 </head>
 
 <body>
@@ -26,23 +102,37 @@
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <div class="header-cont header ">
 
-    <div class="text-right">
-      <div style='display:inline;'>
+      <nav className='nav navbar-light '>
+
+        <a href='#page1' className=' navbar-brand' >
+          <i class="fa fa-home" aria-hidden="true"></i>
+        </a>
 
 
-        <div class="glow " style='margin-right:50px' >
-          <a href='/'>
 
-            <span >
-              Home
-            </span>
+        <ul class='nav navbar-nav'>
+          <div class='navbar-li'>
+              <li className='nav-item'>
+                <a class='nav-link' href='#page2' >About</a>
+              </li>
+              <li className='nav-item'>
+                <a class='nav-link' href='#page3' >Projects</a>
+              </li>
+              <li className='nav-item'>
+                <a class='nav-link' href='#page4' >Contact</a>
+              </li>
+          </div>
+        </ul>
 
-          </a>
+
+      </nav>
         </div>
 
 
@@ -61,135 +151,71 @@
 
 
   <div id='page1' style=''>
-    <h1 class='  '>
-      M.A. Kamis
-    </h1>
+    <div id='page1a'>
+      <h1 class='main-title  '>
+        M.A. Kamis
+      </h1>
+    </div>
   </div>
   <div id='page2'>
-    <img src=''>
-
-    <div class='text-center'>
 
 
-
-      <a href=''><button href='/' class="button button2">ASK</button></a>
-    </div>
-
-    <p class='text-center text-danger' style='margin-top: 20px;'>
-      by m-alchemist
-    </p>
-  </div>
-  <div id='page3' style=''>
     <h1 class='  '>
       About me
     </h1>
-    <div class='text-center'>
-      <div class=' well' style='margin-top:100px;'>
+      <div class='self-portriat page-thumb'>
+        <img  src='./images/moejoe.jpg'/>
+      </div>
+
+
+      <div class=' page-content well-page2' >
         <p class=''>
-          A Cyborg sent back from 2029 to 1984 to kill Sara Conner.
-          Her Son will one day become a savior against the machine
-          in the post-apocalyptic future.
-          Apperently, the terminator has very limited vocabulary.
-          His top qoutes include:
+            <!-- Hi My name is Kamis. I am I found my love for software in college while pursuing my Bachelor's in Chemical Engineering.
+            I was intrigued by the concept of creating extremly useful tools at little to no low cost.  -->
+            The Dude...taken… moe Taken… joe...Taken... batman…. Taken. dude-moe-joe-Man-batman-taken-dot-All is my username…
+             And my password is HelloCity. I’m a guy who’s a pro-noob coder trying to have fun. I worked in a lab in one of the
+              University basements for a while, mixing chemicals and stuff. But I chose to quit and pursue my love for software.
+               Technically, you can call me Master Mixer. There is nothing more to say other than Namaste and have a nice day.
+
+        </p>
+
+        <p class=''>
+
+
         </p>
 
 
-        <a href='https://en.wikipedia.org/wiki/Terminator_(character)' target='_blank'>
-          <p class='text-danger'>
-            Click here if you want to live
-          </p>
 
-        </a>
-      </div>
     </div>
+
+
   </div>
-  <div id='page4'>
-
-    <div style='float:left; width: 550px; height: 400px;'>
-      <div id='page4a' >
-
-      </div>
-    </div>
-
-    <div style='float:right; margin-right:230px;  padding:50px;  width: 450px; height: 400px;'>
-
-      <div class='well2'   >
-        <p>blah blah dkmfrkfmkfsddmsfl;dmfl;sdkmf;ldkmdskfmkdlskfmsdkfk
-          dfklsdklfskdfdsfdfl;dksfl;sdfkdsl
-          dkfkdslfmpkropfsdlkfdlfkdf;lf'dkls;favicon
-          skldfksdflsdkl;foperfksm l rjf kfkrlmfkflmaeopfm32ifk wef </h2>
-        </p>
-      </div>
-    </div>
-  </div>
-
   <div id='page3' style=''>
     <h1 class='  '>
-      Some More Blah Blah
+
     </h1>
-    <div class='text-center'>
-      <div class=' well' style='margin-top:100px;'>
-        <p class='' >
-          A Cyborg sent back from 2029 to 1984 to kill Sara Conner.
-          Her Son will one day become a savior against the machine
-          in the post-apocalyptic future.
-          Apperently, the terminator has very limited vocabulary.
-          His top qoutes include:
-        </p>
-
-
-        <a href='https://en.wikipedia.org/wiki/Terminator_(character)' target='_blank'>
-          <p class='text-danger'>
-            Click here if you want to live
-          </p>
-
-        </a>
-      </div>
-    </div>
-  </div>
-  <div id='page4'>
-    <div style='float:left;  padding:50px; width: 450px; height: 400px;'>
-      <div class='well2' >
-        <p>blah blah dkmfrkfmkfsddmsfl;dmfl;sdkmf;ldkmdskfmkdlskfmsdkfk
-          dfklsdklfskdfdsfdfl;dksfl;sdfkdsl
-          dkfkdslfmpkropfsdlkfdlfkdf;lf'dkls;favicon
-          skldfksdflsdkl;foperfksm l rjf kfkrlmfkflmaeopfm32ifk wef </h2>
-        </p>
-      </div>
-    </div>
-
-    <div style='float:right; margin-right:300px width: 550px; height: 400px; ;'>
-      <div id='page6a' >
-
-      </div>
-    </div>
-
+    <h1 >  Projects</h1>
+<div class="marged">
+  <div class="block revealOnScroll" data-animation="flipInX" data-timeout="400">
+    <div class="image1"></div>
 
   </div>
-  <div id="page7" class="">
+  <div class="block revealOnScroll" data-animation="flipInX">
+    <div class="image2"></div>
+
+  </div>
+  <div class="block revealOnScroll" data-animation="flipInX" data-timeout="800">
+    <div class="image3"></div>
+
+  </div>
+</div>
+
+  </div>
+
+  <div id="page4" class="">
 
 
   <h1  style=''class="text-center  "> Connect <h1/>
-    <!-- <div  class="marg text-center" style="margin-top: 0px; ">
-      <div class='socialMediaButtons'>
-    <div class= "row socialMediaButtons " style="margin-left: 20px;">
-
-
-
-    <a href="https://www.linkedin.com/in/mohamed-al-khamees-182244b0/" target="_blank">
-        <img src="https://github.com/m-alchemist/randomfileFCCprojects2/blob/master/linkedin_logo.png?raw=true" />
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=100012580410738" target="_blank">
-        <img class='fbLogo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/2000px-F_icon.svg.png" alt="Facebook" />
-      </a>
-      <a href="https://twitter.com/moalkhamees" target="_blank ">
-        <img src="https://github.com/m-alchemist/randomfileFCCprojects2/blob/master/twitter_logo.png?raw=true" alt="Twitter" />
-    </a>
-
-       <a href="https://www.youtube.com/channel/UCkVp8_q8NXq0ULLyRiDjlhg" target="_blank ">
-        <img class='youtubeLogo' src="http://www.freeiconspng.com/uploads/youtube-logo-21.png"  alt="youtube" />
-    </a>
- -->
 
 
  <div class='text-center'>
@@ -202,7 +228,7 @@
     <a ='https://www.facebook.com/profile.php?id=100012580410738'>  <i class="fa fa-facebook-f"></i></a>
   </div>
 
-  <p class='text-center text-danger' style='margin-top: 20px;'>
+  <p class='text-center text-danger' style='font-size:20px;margin-top: 20px;'>
     by m-alchemist
   </p>
 
@@ -211,5 +237,8 @@
     </div>
 
   </div>
+
+
+
 </body>
 </html>
