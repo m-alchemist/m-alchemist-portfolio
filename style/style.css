@@ -127,10 +127,10 @@ h5{
   position:fixed;
   top:0px;
   background-color: rgba(248,248,255,.5);
-  height: 50px;
+  height: 60px;
 
   z-index: 10;
-  padding: 10px;
+  padding-top: 15px;
   font-size: 25px;
   opacity: .93;
 }
@@ -374,11 +374,11 @@ p{
 .well-page2{
 
   padding: 20px;
-  margin-top: 30px;
+  margin-top: 20px;
 
   width: 500px;
   height:400px;
-  font-size: 25px;
+  font-size: 20px;
   overflow: hidden;
 
 
@@ -430,6 +430,7 @@ p{
 }
 .fa-home{
   margin-left: 20px;
+  margin-top: 10px;
   color:white;
 }
 .fa-home:hover{
@@ -453,12 +454,14 @@ p{
 
 .self-portriat {
   position: relative;
-  float:left
+  float:left;
+    margin-top: 20px;
   border: 1px solid #333;
   margin: 2%;
   overflow: hidden;
-  width: 540px;
-  margin-right:40px
+  width: 400px;
+  margin-right:40px;
+  margin-left:40px;
 }
 .self-portriat img {
   max-width: 100%;
@@ -490,7 +493,8 @@ h3 { margin-top:0; }
 .image1 {
   width: 100%; height: 250px; border-radius: 20px; position: relative; display: block; background-color: #000316; opacity: 0.8; -webkit-transition: all 400ms ease; transition: all 400ms ease;
   background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png');
-  -webkit-background-size: cover; background-size: cover;
+  background-position:center;
+-webkit-background-size: contain; background-size: contain;
 }
 
 .image2 {
