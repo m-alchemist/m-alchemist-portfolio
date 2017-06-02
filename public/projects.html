@@ -1,0 +1,112 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
+  <script src="jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="style.css">
+
+<script>
+// vanilla JS
+// init with element
+var grid = document.querySelector('.grid');
+var msnry = new Masonry( grid, {
+  // options...
+  itemSelector: '.grid-item',
+  columnWidth: 250
+
+});
+
+// init with selector
+var msnry = new Masonry( '.grid', {
+  // options...
+});
+</script>
+<script>
+$(function() {
+  // Changing the defaults
+  window.sr = ScrollReveal({ reset: false });
+
+  // Customizing a reveal set
+  sr.reveal('.showOnScroll', { duration: 1000 });
+
+})
+</script>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <script src="js/scripts.js"></script>
+
+  <h1>Hello World </h1>
+
+  <div class="grid " style='margin:auto;' data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 250 }'>
+  <div class="grid-item">
+    <img class='grid-image showOnScroll' src='./images/moe.JPG' />
+  </div>
+  <div class="grid-item">
+      <img class='grid-image showOnScroll' src='./images/random1.JPG'   />
+  </div>
+
+  <div class="grid-item">
+      <img class='grid-image showOnScroll' src='./images/wood.jpg'  />
+  </div>
+  <div class="grid-item">
+      <img class='grid-image showOnScroll' src='./images/random2.JPG'  />
+  </div>
+  <div class="grid-item">
+    <img class='grid-image showOnScroll' src='./images/moe.JPG' />
+  </div>
+  <div class="grid-item">
+      <img class='grid-image showOnScroll' src='./images/random1.JPG'   />
+  </div>
+
+  <div class="grid-item">
+      <img class='grid-image showOnScroll' src='./images/wood.jpg'  />
+  </div>
+  <div class="grid-item">
+      <img class='grid-image showOnScroll' src='./images/random2.JPG'  />
+  </div>
+  <div class="grid-item">
+    <img class='grid-image showOnScroll' src='./images/moe.JPG' />
+  </div>
+  <div class="grid-item">
+      <img class='grid-image showOnScroll' src='./images/random1.JPG'   />
+  </div>
+
+  <div class="grid-item">
+      <img class='grid-image showOnScroll' src='./images/wood.jpg'  />
+  </div>
+  <div class="grid-item">
+      <img class='grid-image showOnScroll' src='./images/random2.JPG'  />
+  </div>
+  <div class="grid-item">
+    <img class='grid-image showOnScroll' src='./images/moe.JPG' />
+  </div>
+  <div class="grid-item">
+      <img class='grid-image showOnScroll' src='./images/random1.JPG'   />
+  </div>
+
+  <div class="grid-item">
+      <img class='grid-image showOnScroll' src='./images/wood.jpg'  />
+  </div>
+  <div class="grid-item">
+      <img class='grid-image showOnScroll' src='./images/random2.JPG'  />
+  </div>
+</div>
+
+
+
+</body>
+</html>

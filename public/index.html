@@ -12,6 +12,8 @@
   <script src="https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.js"></script>
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
 
 <script>
 
@@ -97,6 +99,7 @@ $(function() {
 </head>
 
 <body>
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" type='css/text' rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" type='css/text' rel="stylesheet">
 
@@ -176,7 +179,7 @@ $(function() {
       About me
     </h1>
       <div class='self-portriat page-thumb'>
-        <img  src='./images/moe.jpg'/>
+        <img  src='./images/moe.JPG'/>
       </div>
 
 
@@ -227,7 +230,10 @@ $(function() {
 <table >
     <tr>
       <td>
-        <img class='showOnScroll tableIcon' src='https://cdn2.iconfinder.com/data/icons/files-coding/24/files-coding-java-512.png'>
+        <div class='showOnScroll tableIcon'>
+            <i class="devicon-java-plain  "></i>
+          </div>
+
       </td>
     <td>
 
@@ -255,11 +261,13 @@ $(function() {
   </td>
 
   <td>
-    <img class='showOnScroll tableIcon' src='http://www.csscript.net/css_logo.ico'/>
+    <div class='showOnScroll tableIcon'>
+        <i class="devicon-c-plain"></i>
+      </div>
   </td>
   <td>
 
-    <p class=''>C#</p>
+    <p class=''>C</p>
   </td>
   <td>
     <i class="showOnScroll tableIcon fa fa-database " style='font-size:35px;' aria-hidden="true"></i>
@@ -303,6 +311,16 @@ $(function() {
 
 
  <div class='text-center'>
+   <div>
+     <form action="mail.php">
+     <p>Name</p> <input type="text" name="name">
+     <p>Email</p> <input type="text" name="email">
+     <p>Message</p><textarea name="message" rows="6" cols="25"></textarea><br />
+     <input type="submit" value="Send"><input type="reset" value="Clear">
+     </form>
+
+
+   </div>
 
 
   <div class='glow2' style="margin:20px;font-size:40px;">
@@ -318,9 +336,7 @@ $(function() {
 
         </div>
       </div>
-    </div>
 
-  </div>
 
 
 

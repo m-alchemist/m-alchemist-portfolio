@@ -3,7 +3,7 @@ body {
   background-size:cover;
   margin: 0px;
    font-family: 'Josefin Sans', sans-serif;
-   font-size:15px;
+
    margin:0px;
 
 }
@@ -157,6 +157,7 @@ h5{
      padding-top: 200px;
      padding-bottom: 400px;
    background-position: right;
+       overflow: auto;
 }
 #page2{
 
@@ -194,13 +195,11 @@ h5{
   width:100%;
   top:0px;
   background-color:#000316;
-
-
   padding: 100px;
-
   left: 0px;
   top: 0px;
   margin:0px;
+
 }
 #page4a{
 
@@ -455,6 +454,8 @@ p{
   margin-left:40px;
 }
 .self-portriat img {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+   filter: grayscale(100%);
   max-width: 100%;
 
 
@@ -466,6 +467,8 @@ p{
   -moz-transform: scale(1.3);
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+   filter: grayscale(30%);
 }
 .page-thumb {
     float: left
@@ -528,6 +531,7 @@ h3 { margin-top:0; }
   background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png');
   background-position:center;
 -webkit-background-size: contain; background-size: contain;
+  background-repeat:no-repeat;
 }
 
 .image2 {
@@ -535,13 +539,143 @@ h3 { margin-top:0; }
   background-image: url('https://node-os.com/assets/images/nodejs.png');
   background-position:center;
   -webkit-background-size: contain;background-size: contain;
+  background-repeat:no-repeat;
 }
 .image3 {
   width: 100%; height: 250px; border-radius: 20px; position: relative; display: block; background-color: #48cfad; opacity: 0.8; -webkit-transition: all 400ms ease; transition: all 400ms ease;
   background-image: url('https://rahulvishwakarma.files.wordpress.com/2016/06/mongodb_slide.png?w=300');
     background-position:center;
   -webkit-background-size: contain; background-size: contain;
+    background-repeat:no-repeat;
 }
+* { box-sizing:border-box; }
+
+/* basic stylings ------------------------------------------ */
+
+.container 		{
+  font-family:'Roboto';
+  width:600px;
+  margin:30px auto 0;
+  display:block;
+  background:#FFF;
+  padding:10px 50px 50px;
+}
+
+.footer 	{ text-align:center; }
+.footer a  { color:#53B2C8; }
+
+/* form starting stylings ------------------------------- */
+.group 			  {
+  position:relative;
+  margin-bottom:45px;
+}
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+  color:#999;
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px;
+  width:0;
+  bottom:1px;
+  position:absolute;
+  background:#5264AE;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+.grid-item{
+
+  width:280px;
+  margin:auto;
+
+}
+.grid-image{
+
+    border-radius: 10px;
+    width:280px;
+    margin:5px;
+    margin-bottom:15px;
+
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%;
+}
+input{
+  color: blue;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+
+  width:50%;
+}
+
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%;
+  width:100px;
+  top:25%;
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
 
 // Others
 *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
