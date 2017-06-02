@@ -21,7 +21,7 @@ h1 {
 }
 span {
   /*font-family: 'Permanent Marker', cursive;*/
-font-family: 'Architects Daughter', cursive;
+  font-family:'Josefin Sans', sans-serif;
 
   color:black;
   margin-top: 10px;
@@ -98,7 +98,7 @@ h4 {
   float:right;
 
 }
-li{
+.navbar-li li{
     display: inline-block;
     font-color:white;
     margin-right:5px;
@@ -149,7 +149,7 @@ h5{
 
 }
 #page1a{
-  background: url('/images/BlueWhale.png') no-repeat center center fixed;
+
   -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
@@ -183,11 +183,11 @@ h5{
   width:100%;
   top:0px;
   background-color:#DFDCE3;
-  height: 600px;
+
   left: 0px;
   top: 0px;
     margin:0px;
-    padding:50px;
+    padding:20px;
 }
 
 #page4{
@@ -241,6 +241,12 @@ background-color: #4ABDAC;
   background-color:#DFDCE3;
   margin:0px;
   padding-top: 20px;
+}
+.whale{
+  position: absolute;
+  right:20px;
+  bottom:150px;
+  width:50%;
 }
 a {
   text-decoration: none !important;
@@ -377,7 +383,7 @@ p{
   margin-top: 20px;
 
   width: 500px;
-  height:400px;
+
   font-size: 20px;
   overflow: hidden;
 
@@ -436,21 +442,6 @@ p{
 .fa-home:hover{
   color:black;
 }
-/*.self-portriat{
-  width:400px;
-  vertical-align: middle;
-  margin:20px;
-  display: inline-block;
-
-}*/
-/*.self-portriat {
-  position: relative;
-
-  border: 1px solid #333;
-  margin: 2%;
-  overflow: hidden;
-  width: 540px;
-}*/
 
 .self-portriat {
   position: relative;
@@ -459,7 +450,7 @@ p{
   border: 1px solid #333;
   margin: 2%;
   overflow: hidden;
-  width: 400px;
+  width: 350px;
   margin-right:40px;
   margin-left:40px;
 }
@@ -482,6 +473,48 @@ p{
 .page-content {
     margin-left: 210px
 }
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.tableIcon{
+  height:35px;
+  color:grey;
+  vertical-align:middle;
+  font-size:35px;
+  margin-right: 15px;
+}
+
+.table-list{
+  text-align: left;
+}
+.table-list li {
+    list-style-type: none;
+    text-align: left;
+    margin-left: 0px;
+}
+
+td:nth-child(even){
+	vertical-align:top;
+    text-align: left;
+    width: 150px;
+    height:100px;
+    padding-left: 10px;
+
+    padding-top:20px;
+
+}
+td:nth-child(odd){
+	vertical-align:top;
+    text-align: right;
+
+    width: 150px;
+    height:100px;
+    padding-top:20px;
+
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
 .block { width: 31.33%; margin: 1%; float: left; }
 
 h3 { margin-top:0; }
@@ -512,6 +545,8 @@ h3 { margin-top:0; }
 
 // Others
 *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*Animation Reference*/
 /*!
 Animate.css - https://daneden.me/animate
 Licensed under the MIT license

@@ -7,7 +7,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Portfolio</title>
-  <link href="/sstyle/style.css" rel="stylesheet" />
+  <link href="/style/style.css" rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.js"></script>
@@ -84,6 +84,16 @@ $(function() {
   revealOnScroll();
 });
 </script>
+<script>
+$(function() {
+  // Changing the defaults
+  window.sr = ScrollReveal({ reset: false });
+
+  // Customizing a reveal set
+  sr.reveal('.showOnScroll', { duration: 1000 });
+
+})
+</script>
 </head>
 
 <body>
@@ -118,8 +128,8 @@ $(function() {
 
 
         <ul class='nav navbar-nav'>
-          <div class='navbar-li'>
-              <li className='nav-item'>
+          <div class='navbar-li '>
+              <li className='nav-item '>
                 <a class='nav-link' href='#page2' >About</a>
               </li>
               <li className='nav-item'>
@@ -152,9 +162,11 @@ $(function() {
 
   <div id='page1' style=''>
     <div id='page1a'>
-      <h1 class='main-title  '>
-        M.A. Kamis
-      </h1>
+
+
+
+      <h1 class="main-title revealOnScroll" data-animation="fadeInUp">M.A.Kamees</h1>
+      <div><img class="whale revealOnScroll" data-animation="fadeInUp" src='/images/BlueWhale.png' /></div>
     </div>
   </div>
   <div id='page2'>
@@ -164,25 +176,28 @@ $(function() {
       About me
     </h1>
       <div class='self-portriat page-thumb'>
-        <img  src='./images/moejoe.jpg'/>
+        <img  src='./images/moe.jpg'/>
       </div>
 
 
       <div class=' page-content well-page2' >
         <p class=''>
-            <!-- Hi My name is Kamis. I am I found my love for software in college while pursuing my Bachelor's in Chemical Engineering.
-            I was intrigued by the concept of creating extremly useful tools at little to no low cost.  -->
-            The Dude...taken… moe Taken… joe...Taken... batman…. Taken. dude-moe-joe-Man-batman-taken-dot-All is my username…
-             And my password is HelloCity. I’m a guy who’s a pro-noob coder trying to have fun. I worked in a lab in one of the
-              University basements for a while, mixing chemicals and stuff. But I chose to quit and pursue my love for software.
-               Technically, you can call me Master Mixer. There is nothing more to say other than Namaste and have a nice day.
+
+               Hi my name is Mohamed Alkhamees. I'm a Chemical Engineer with a Master's and Bachelors
+               degrees in the Field of Engineering. While in college I found my love for software.
+               I was intrigued by the concept of creating extremly useful tools at little to no cost.
+
+
 
         </p>
 
         <p class=''>
-
+          In my free time I like to turn to my hobbies which like is best described as: "Engineering solutions
+          to chalenges and to join Bill Nye in saving the world." I am self taught full stack developer with
+          experience in creating applications and websites with the most up to date libraries.
 
         </p>
+
 
 
 
@@ -209,6 +224,75 @@ $(function() {
 
   </div>
 </div>
+<table >
+    <tr>
+      <td>
+        <img class='showOnScroll tableIcon' src='https://cdn2.iconfinder.com/data/icons/files-coding/24/files-coding-java-512.png'>
+      </td>
+    <td>
+
+        <p class=''>Java</p>
+
+    </td>
+    <td><img class='showOnScroll tableIcon' src='https://cdn2.iconfinder.com/data/icons/files-coding/24/files-coding-c-plus-plus-512.png'></td>
+    <td>
+      <p class=''>  C++</p>
+    </td>
+    <td>
+      <img class='showOnScroll tableIcon' src='http://dronekit.io/assets/Python-logo-notext-9d418c4111825093b52777e028c2315f.svg'>
+    </td>
+    <td>
+      <p class=''>Python</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    <img class='showOnScroll tableIcon' src='http://i.imgur.com/8n1sr.png'>
+  </td>
+  <td>
+      <p class=''>  Matlab</p>
+
+  </td>
+
+  <td>
+    <img class='showOnScroll tableIcon' src='http://www.csscript.net/css_logo.ico'/>
+  </td>
+  <td>
+
+    <p class=''>C#</p>
+  </td>
+  <td>
+    <i class="showOnScroll tableIcon fa fa-database " style='font-size:35px;' aria-hidden="true"></i>
+  </td>
+  <td>
+    <p class=''> DataBase</p>
+      <ul class='table-list'>  <li >NoSQL</li>   <li>MongoDB</li> </ul>
+  </td>
+</tr>
+
+<tr>
+  <td>
+  <i class="showOnScroll tableIcon fa fa-html5 " style='font-size:35px;' aria-hidden="true"></i>
+  </td>
+  <td>
+    <p class=''>HTML5</p>
+  </td>
+  <td>
+    <i class="showOnScroll tableIcon fa fa-css3 " style='font-size:35px;' aria-hidden="true"></i>
+  </td>
+<td>
+  <p class=''>CSS3</p>
+</td>
+<td>
+      <img class='showOnScroll tableIcon' style='width:50px;'src='./images/react.png'/>
+</td>
+<td>
+  <p class=''> React-Redux</p>
+
+</td>
+</tr>
+</table>
+
 
   </div>
 
