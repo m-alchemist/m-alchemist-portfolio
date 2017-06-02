@@ -101,7 +101,7 @@ h4 {
 .navbar-li li{
     display: inline-block;
     font-color:white;
-    margin-right:5px;
+    margin-right:10px;
 
 }
 .nav-link{
@@ -142,8 +142,6 @@ h5{
      -o-background-size: cover;
   width:100%;
   top:0px;
-
-
 
   margin:0px;
 
@@ -192,10 +190,18 @@ h5{
 }
 
 #page4{
+
+    background: url('http://sdeerwallpaper.com/Cool-Wallpapers/new-york-on-black-and-white-wallpapers-phone-Is-Cool-Wallpapers.jpg') no-repeat center center fixed;
+   -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+  background:
   width:100%;
   top:0px;
   background-color:#000316;
-  padding: 100px;
+  padding: 40px;
   left: 0px;
   top: 0px;
   margin:0px;
@@ -379,7 +385,7 @@ p{
 .well-page2{
 
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 50px;
 
   width: 500px;
 
@@ -450,8 +456,8 @@ p{
   margin: 2%;
   overflow: hidden;
   width: 350px;
-  margin-right:40px;
-  margin-left:40px;
+  margin-right:100px;
+  margin-left:100px;
 }
 .self-portriat img {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
@@ -553,7 +559,7 @@ h3 { margin-top:0; }
 /* basic stylings ------------------------------------------ */
 
 .container 		{
-  font-family:'Roboto';
+
   width:600px;
   margin:30px auto 0;
   display:block;
@@ -567,26 +573,70 @@ h3 { margin-top:0; }
 /* form starting stylings ------------------------------- */
 .group 			  {
   position:relative;
-  margin-bottom:45px;
+  margin-bottom:30px;
+
+
 }
-input 				{
-  font-size:18px;
+.button {
+    background-color: black; /* Green */
+    border: none;
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.submit-button {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+.submit-button:hover {
+    background-color: white;
+    color: black;
+}
+ input 				{
+  display: inline-block;
+  font-family:'Josefin Sans', sans-serif;
+  background-color: 	rgba(0, 3, 22,.7);
+  color:white;
+  font-size:22px;
   padding:10px 10px 10px 5px;
   display:block;
   width:300px;
   border:none;
-  border-bottom:1px solid #757575;
+  border-bottom:2px solid white;
 }
-input:focus 		{ outline:none; }
+ input:focus 		{ outline:none; }
+textarea{
+
+  background-color: rgba(0, 3, 22,.7);
+  color:white;
+  font-size:22px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:600px;
+  height:300px;
+  margin:auto;
+  border:none;
+
+}
 
 /* LABEL ======================================= */
 label 				 {
-  color:#999;
-  font-size:18px;
+  color:white;
+  font-size:20px;
   font-weight:normal;
   position:absolute;
   pointer-events:none;
-  left:5px;
+  left:20px;
   top:10px;
   transition:0.2s ease all;
   -moz-transition:0.2s ease all;
@@ -596,8 +646,8 @@ label 				 {
 /* active state */
 input:focus ~ label, input:valid ~ label 		{
   top:-20px;
-  font-size:14px;
-  color:#5264AE;
+  font-size:17px;
+  color:white;
 }
 
 /* BOTTOM BARS ================================= */
@@ -608,7 +658,7 @@ input:focus ~ label, input:valid ~ label 		{
   width:0;
   bottom:1px;
   position:absolute;
-  background:#5264AE;
+  background:white;
   transition:0.2s ease all;
   -moz-transition:0.2s ease all;
   -webkit-transition:0.2s ease all;
@@ -633,9 +683,7 @@ input:focus ~ label, input:valid ~ label 		{
 .bar:after {
   right:50%;
 }
-input{
-  color: blue;
-}
+
 
 /* active state */
 input:focus ~ .bar:before, input:focus ~ .bar:after {

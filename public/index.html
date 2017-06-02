@@ -300,7 +300,7 @@ $(function() {
 </td>
 </tr>
 </table>
-
+  <a href='/projects'>  <h2> See More Projects Here </h2> </a>
 
   </div>
 
@@ -312,13 +312,33 @@ $(function() {
 
  <div class='text-center'>
    <div>
-     <form action="mail.php">
-     <p>Name</p> <input type="text" name="name">
-     <p>Email</p> <input type="text" name="email">
-     <p>Message</p><textarea name="message" rows="6" cols="25"></textarea><br />
-     <input type="submit" value="Send"><input type="reset" value="Clear">
-     </form>
 
+ <form action="/contactus" method="post">
+
+
+  <div class="group" >
+    <input type="text" name="name" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Name</label>
+  </div>
+  <div class="group">
+    <input type="text" name="subject" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Subject</label>
+  </div>
+
+  <div class="group">
+    <input type="text" name="email" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Email</label>
+  </div>
+
+ <textarea rows="5" name="message" cols="30" required></textarea>
+ <button class='button submit-button ' type="submit" >Submit</button>
+ </form>
 
    </div>
 
