@@ -375,7 +375,7 @@ p{
   padding: 50px;
   margin-top: 200px;
   margin-bottom: 200px;
-  width: 500px;
+  width: 30%;
   height:300px;
   font-size: 30px
 
@@ -385,8 +385,8 @@ p{
 .well-page2{
 
   padding: 20px;
-  margin-top: 50px;
-  width: 500px;
+  margin-top: 30px;
+  width: 50%;
   font-size: 20px;
   overflow: hidden;
 
@@ -450,10 +450,10 @@ p{
   position: relative;
   float:left;
     margin-top: 20px;
-  border: 1px solid #333;
+  /*border: 1px solid #333;*/
   margin: 2%;
   overflow: hidden;
-  width: 300px;
+  width: 30%;
   margin-right:50px;
   margin-left:50px;
 }
@@ -585,7 +585,7 @@ h3 { margin-top:0; }
     text-decoration: none;
     display: inline-block;
     font-size: 18px;
-    margin: 4px 2px;
+    margin: 2px 2px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
@@ -625,6 +625,7 @@ textarea{
   margin:auto;
   border:none;
 
+
 }
 
 /* LABEL ======================================= */
@@ -661,26 +662,9 @@ input:focus ~ label, input:valid ~ label 		{
   -moz-transition:0.2s ease all;
   -webkit-transition:0.2s ease all;
 }
-.grid-item{
 
-  width:280px;
-  margin:auto;
 
-}
-.grid-image{
 
-    border-radius: 10px;
-    width:280px;
-    margin:5px;
-    margin-bottom:15px;
-
-}
-.bar:before {
-  left:50%;
-}
-.bar:after {
-  right:50%;
-}
 
 
 /* active state */
@@ -707,6 +691,9 @@ input:focus ~ .highlight {
   -moz-animation:inputHighlighter 0.3s ease;
   animation:inputHighlighter 0.3s ease;
 }
+
+
+
 
 /* ANIMATIONS ================ */
 @-webkit-keyframes inputHighlighter {

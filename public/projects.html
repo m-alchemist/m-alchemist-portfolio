@@ -5,30 +5,30 @@
   <meta charset="utf-8">
 
   <title>The HTML5 Herald</title>
-  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
   <script src="jquery-3.2.1.min.js"></script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+      <script src="https://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
+        <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="project-style.css">
 
 <script>
 // vanilla JS
 // init with element
-var grid = document.querySelector('.grid');
-var msnry = new Masonry( grid, {
-  // options...
-  itemSelector: '.grid-item',
-  columnWidth: 250
-
+$(function() {
+var $grid = $('.grid').imagesLoaded( function() {
+  $grid.masonry({
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    columnWidth: '.grid-sizer'
+  });
 });
+})
 
-// init with selector
-var msnry = new Masonry( '.grid', {
-  // options...
-});
+
+
 </script>
 <script>
 $(function() {
@@ -47,64 +47,48 @@ $(function() {
 </head>
 
 <body>
-  <script src="js/scripts.js"></script>
 
-  <h1>Hello World </h1>
 
-  <div class="grid " style='margin:auto;' data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 250 }'>
-  <div class="grid-item">
-    <img class='grid-image showOnScroll' src='./images/moe.JPG' />
-  </div>
-  <div class="grid-item">
-      <img class='grid-image showOnScroll' src='./images/random1.JPG'   />
-  </div>
+  <h1>prijects </h1>
 
-  <div class="grid-item">
-      <img class='grid-image showOnScroll' src='./images/wood.jpg'  />
-  </div>
-  <div class="grid-item">
-      <img class='grid-image showOnScroll' src='./images/random2.JPG'  />
-  </div>
-  <div class="grid-item">
-    <img class='grid-image showOnScroll' src='./images/moe.JPG' />
-  </div>
-  <div class="grid-item">
-      <img class='grid-image showOnScroll' src='./images/random1.JPG'   />
-  </div>
-
-  <div class="grid-item">
-      <img class='grid-image showOnScroll' src='./images/wood.jpg'  />
-  </div>
-  <div class="grid-item">
-      <img class='grid-image showOnScroll' src='./images/random2.JPG'  />
-  </div>
-  <div class="grid-item">
-    <img class='grid-image showOnScroll' src='./images/moe.JPG' />
-  </div>
-  <div class="grid-item">
-      <img class='grid-image showOnScroll' src='./images/random1.JPG'   />
-  </div>
-
-  <div class="grid-item">
-      <img class='grid-image showOnScroll' src='./images/wood.jpg'  />
-  </div>
-  <div class="grid-item">
-      <img class='grid-image showOnScroll' src='./images/random2.JPG'  />
-  </div>
-  <div class="grid-item">
-    <img class='grid-image showOnScroll' src='./images/moe.JPG' />
-  </div>
-  <div class="grid-item">
-      <img class='grid-image showOnScroll' src='./images/random1.JPG'   />
-  </div>
-
-  <div class="grid-item">
-      <img class='grid-image showOnScroll' src='./images/wood.jpg'  />
-  </div>
-  <div class="grid-item">
-      <img class='grid-image showOnScroll' src='./images/random2.JPG'  />
+  <div class="grid">
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
+</div>
+<div class="container">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Hello World</div>
   </div>
 </div>
+<div class="grid-item">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
+</div>
+<div class="grid-item">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
+</div>
+<div class="grid-item">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
+</div>
+<div class="grid-item">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
+</div>
+<div class="grid-item">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
+</div>
+<div class="grid-item">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
+</div>
+<div class="grid-item">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
+</div>
+<div class="grid-item">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
+</div>
+
+    </div>
+
 
 
 

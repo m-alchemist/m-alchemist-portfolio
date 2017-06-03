@@ -13,7 +13,27 @@
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.js"></script>
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <script src="https://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
+    <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
 
+    <link rel="stylesheet" href="project-style.css">
+
+<script>
+// vanilla JS
+// init with element
+$(function() {
+var $grid = $('.grid').imagesLoaded( function() {
+$grid.masonry({
+itemSelector: '.grid-item',
+percentPosition: true,
+columnWidth: '.grid-sizer'
+});
+});
+})
+
+
+
+</script>
 
 <script>
 
@@ -136,7 +156,7 @@ $(function() {
                 <a class='nav-link' href='#page2' >About</a>
               </li>
               <li className='nav-item'>
-                <a class='nav-link' href='#page3' >Projects</a>
+                <a class='nav-link' href='#projects' >Projects</a>
               </li>
               <li className='nav-item'>
                 <a class='nav-link' href='#page4' >Contact</a>
@@ -195,7 +215,7 @@ $(function() {
         </p>
 
         <p class=''>
-          In my free time I like to turn to my hobbies which like is best described as: "Engineering solutions
+          In my free time I like to turn to my hobbies which is best described as: "Engineering solutions
           to chalenges and to join Bill Nye in saving the world." I am self taught full stack developer with
           experience in creating applications and websites with the most up to date libraries.
 
@@ -209,10 +229,8 @@ $(function() {
 
   </div>
   <div id='page3' style=''>
-    <h1 class='  '>
 
-    </h1>
-    <h1 >  Projects</h1>
+    <h1 >  Experience</h1>
 <div class="marged">
   <div class="block revealOnScroll" data-animation="flipInX" data-timeout="400">
     <div class="image1"></div>
@@ -304,6 +322,54 @@ $(function() {
 
   </div>
 
+  <div id='projects'>
+
+      <h1 >  Projects</h1>
+    <div class="grid">
+
+  <div class="grid-sizer"></div>
+
+
+  <div class="grid-item ">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Tuck My</div>
+    </div>
+  </div>
+  <div class="grid-item ">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="Avatar" class="image">
+    <div class="overlay2">
+      <div class="text">Dick! </div>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
+  </div>
+  <div class="grid-item">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
+  </div>
+  <div class="grid-item">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
+  </div>
+  <div class="grid-item">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
+  </div>
+  <div class="grid-item">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
+  </div>
+  <div class="grid-item">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
+  </div>
+  <div class="grid-item">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
+  </div>
+
+      </div>
+
+
+
+  </div>
   <div id="page4" class="">
 
 
@@ -336,8 +402,8 @@ $(function() {
     <label>Email</label>
   </div>
 
- <textarea rows="5" name="message" cols="30" required></textarea>
- <button class='button submit-button ' type="submit" >Submit</button>
+ <textarea rows="5" name="message" cols="30"  placeholder="Write your message..." required></textarea>
+ <button class='button submit-button ' type="submit" style='margin:0px;' >Submit</button>
  </form>
 
    </div>
