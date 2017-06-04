@@ -1,3 +1,10 @@
+#projects{
+  padding-top:30px;
+  padding-bottom:30px;
+}
+
+
+
 * { box-sizing: border-box; }
 
 /* force scrollbar */
@@ -9,6 +16,7 @@ body { font-family: sans-serif; }
 
 .grid {
   background: #DDD;
+  margin-top:30px;
 }
 
 /* clear fix */
@@ -23,6 +31,7 @@ body { font-family: sans-serif; }
 .grid-sizer,
 .grid-item {
   width: 33.333%;
+  width: 33.333%;
   position: relative;
 }
 
@@ -34,6 +43,7 @@ body { font-family: sans-serif; }
 .grid-item img {
   display: block;
   width: 100%;
+  height:250px;
 }
 .container {
   position: relative;
@@ -43,6 +53,7 @@ body { font-family: sans-serif; }
 .image {
   display: block;
   width: 100%;
+
   height: auto;
 }
 
@@ -52,7 +63,7 @@ body { font-family: sans-serif; }
   left: 0;
   right: 0;
   background-color: rgba(0,0,0,.5);
-  overflow: hidden;
+
   width: 100%;
   height:0;
   transition: .5s ease;
@@ -71,6 +82,7 @@ body { font-family: sans-serif; }
   right: 0;
   height: 100%;
   width: 100%;
+  overflow:hidden;
   opacity: 0;
   transition: .5s ease;
     background-color: rgba(0,0,0,.5);
@@ -81,12 +93,49 @@ body { font-family: sans-serif; }
 .text {
   white-space: nowrap;
   color: white;
-  font-size: 20px;
-  position: absolute;
-  text-align: left;
-  overflow: hidden;
-  top: 50%;
+  font-size: 25px;
+  text-align: center;
+
+  position: relative;
+  float: left;
+  top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -35%);
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-family:'Josefin Sans', sans-serif;
+}
+.overlay2:hover .text {
+  opacity: 1;
+  top: 20%;
+
+
+}
+.text-body {
+
+  color: white;
+  font-size: 15px;
+  text-align: center;
+
+  position: relative;
+  float: left;
+  top: 40%;
+  left: 50%;
+  width:100%;
+
+  transform: translate(-50%, -35%);
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-family:'Josefin Sans', sans-serif;
+}
+.overlay2:hover .text {
+  opacity: 1;
+  top: 20%;
+
+
+}
+h3{
+  font-family:'Josefin Sans', sans-serif;
 }

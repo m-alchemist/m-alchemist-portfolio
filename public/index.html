@@ -14,108 +14,121 @@
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   <script src="https://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
-    <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
 
-    <link rel="stylesheet" href="project-style.css">
+  <link rel="stylesheet" href="project-style.css">
 
-<script>
-// vanilla JS
-// init with element
-$(function() {
-var $grid = $('.grid').imagesLoaded( function() {
-$grid.masonry({
-itemSelector: '.grid-item',
-percentPosition: true,
-columnWidth: '.grid-sizer'
-});
-});
-})
-
-
-
-</script>
-
-<script>
-
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
+  <script>
+  // vanilla JS
+  // init with element
+  $(function() {
+    var $grid = $('.grid').imagesLoaded( function() {
+      $grid.masonry({
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        columnWidth: '.grid-sizer'
       });
-    } // End if
+    });
+  })
+
+
+
+  </script>
+
+  <script>
+
+  $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
   });
-});
 
-</script>
-<script>
-$(function() {
+  </script>
+  <script>
+  $(function() {
 
-  var $window           = $(window),
-      win_height_padded = $window.height() * 1.1,
-      isTouch           = Modernizr.touch;
+    var $window           = $(window),
+    win_height_padded = $window.height() * 1.1,
+    isTouch           = Modernizr.touch;
 
-  if (isTouch) { $('.revealOnScroll').addClass('animated'); }
+    if (isTouch) { $('.revealOnScroll').addClass('animated'); }
 
-  $window.on('scroll', revealOnScroll);
+    $window.on('scroll', revealOnScroll);
 
-  function revealOnScroll() {
-    var scrolled = $window.scrollTop(),
-        win_height_padded = $window.height() * 1.1;
+    function revealOnScroll() {
+      var scrolled = $window.scrollTop(),
+      win_height_padded = $window.height() * 1.1;
 
-    // Showed...
-    $(".revealOnScroll:not(.animated)").each(function () {
-      var $this     = $(this),
-          offsetTop = $this.offset().top;
+      // Showed...
+      $(".revealOnScroll:not(.animated)").each(function () {
+        var $this     = $(this),
+        offsetTop = $this.offset().top;
 
-      if (scrolled + win_height_padded > offsetTop) {
-        if ($this.data('timeout')) {
-          window.setTimeout(function(){
+        if (scrolled + win_height_padded > offsetTop) {
+          if ($this.data('timeout')) {
+            window.setTimeout(function(){
+              $this.addClass('animated ' + $this.data('animation'));
+            }, parseInt($this.data('timeout'),10));
+          } else {
             $this.addClass('animated ' + $this.data('animation'));
-          }, parseInt($this.data('timeout'),10));
-        } else {
-          $this.addClass('animated ' + $this.data('animation'));
+          }
         }
-      }
-    });
-    // Hidden...
-   $(".revealOnScroll.animated").each(function (index) {
-      var $this     = $(this),
-          offsetTop = $this.offset().top;
-      if (scrolled + win_height_padded < offsetTop) {
-        $(this).removeClass('animated fadeInUp flipInX lightSpeedIn')
-      }
-    });
-  }
+      });
+      // Hidden...
+      $(".revealOnScroll.animated").each(function (index) {
+        var $this     = $(this),
+        offsetTop = $this.offset().top;
+        if (scrolled + win_height_padded < offsetTop) {
+          $(this).removeClass('animated fadeInUp flipInX lightSpeedIn')
+        }
+      });
+    }
 
-  revealOnScroll();
-});
-</script>
-<script>
-$(function() {
-  // Changing the defaults
-  window.sr = ScrollReveal({ reset: false });
+    revealOnScroll();
+  });
+  </script>
+  <script>
+  $(function() {
+    // Changing the defaults
+    window.sr = ScrollReveal({ reset: false });
 
-  // Customizing a reveal set
-  sr.reveal('.showOnScroll', { duration: 1000 });
+    // Customizing a reveal set
+    sr.reveal('.showOnScroll', { duration: 1000 });
 
-})
-</script>
+  })
+  </script>
+  <script>
+
+    $(function() {
+      $('#extraProjects').hide();
+      $('#loadMoreButton').click(function(){
+
+
+
+
+      })
+
+    })
+  </script>
 </head>
 
 <body>
@@ -138,290 +151,367 @@ $(function() {
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <div class="header-cont header ">
 
-      <nav className='nav navbar-light '>
+    <nav className='nav navbar-light '>
 
-        <a href='#page1' className=' navbar-brand' >
-          <i class="fa fa-home" aria-hidden="true"></i>
-        </a>
-
-
-
-        <ul class='nav navbar-nav'>
-          <div class='navbar-li '>
-              <li className='nav-item '>
-                <a class='nav-link' href='#page2' >About</a>
-              </li>
-              <li className='nav-item'>
-                <a class='nav-link' href='#projects' >Projects</a>
-              </li>
-              <li className='nav-item'>
-                <a class='nav-link' href='#page4' >Contact</a>
-              </li>
-          </div>
-        </ul>
+      <a href='#page1' className=' navbar-brand' >
+        <i class="fa fa-home" aria-hidden="true"></i>
+      </a>
 
 
-      </nav>
+
+      <ul class='nav navbar-nav'>
+        <div class='navbar-li '>
+          <li className='nav-item '>
+            <a class='nav-link' href='#page2' >About</a>
+          </li>
+          <li className='nav-item'>
+            <a class='nav-link' href='#projects' >Projects</a>
+          </li>
+          <li className='nav-item'>
+            <a class='nav-link' href='#page4' >Contact</a>
+          </li>
         </div>
+      </ul>
 
 
-
-
-
-
-
-
-      </div>
-
-    </div>
-
+    </nav>
   </div>
 
 
 
-  <div id='page1' style=''>
-    <div id='page1a'>
-
-
-
-      <h1 class="main-title revealOnScroll" data-animation="fadeInUp">M.A.Kamees</h1>
-      <div><img class="whale revealOnScroll" data-animation="fadeInUp" src='/images/BlueWhale.png' /></div>
-    </div>
-  </div>
-  <div id='page2'>
-
-
-    <h1 class='  '>
-      About me
-    </h1>
-      <div class='self-portriat page-thumb'>
-        <img  src='./images/moe.JPG'/>
-      </div>
-
-
-      <div class=' page-content well-page2' >
-        <p class=''>
-
-               Hi my name is Mohamed Alkhamees. I'm a Chemical Engineer with a Master's and Bachelors
-               degrees in the Field of Engineering. While in college I found my love for software.
-               I was intrigued by the concept of creating extremly useful tools at little to no cost.
-
-
-
-        </p>
-
-        <p class=''>
-          In my free time I like to turn to my hobbies which is best described as: "Engineering solutions
-          to chalenges and to join Bill Nye in saving the world." I am self taught full stack developer with
-          experience in creating applications and websites with the most up to date libraries.
-
-        </p>
 
 
 
 
-    </div>
+
+</div>
+
+</div>
+
+</div>
 
 
-  </div>
-  <div id='page3' style=''>
 
-    <h1 >  Experience</h1>
-<div class="marged">
-  <div class="block revealOnScroll" data-animation="flipInX" data-timeout="400">
-    <div class="image1"></div>
+<div id='page1' style=''>
+  <div id='page1a'>
 
-  </div>
-  <div class="block revealOnScroll" data-animation="flipInX">
-    <div class="image2"></div>
 
-  </div>
-  <div class="block revealOnScroll" data-animation="flipInX" data-timeout="800">
-    <div class="image3"></div>
 
+    <h1 class="main-title revealOnScroll" data-animation="fadeInUp">M.A.Kamees</h1>
+    <div><img class="whale revealOnScroll" data-animation="fadeInUp" src='/images/BlueWhale.png' /></div>
   </div>
 </div>
-<table >
+<div id='page2'>
+
+
+  <h1 class='  '>
+    About me
+  </h1>
+  <div class='self-portriat page-thumb'>
+    <img  src='./images/moe.JPG'/>
+  </div>
+
+
+  <div class='showOnScroll page-content well-page2' >
+    <p class=''>
+
+      Hi my name is Mohamed Alkhamees. I'm a Chemical Engineer with a Master's and Bachelors
+      degrees in the Field of Engineering. While in college I found my love for software.
+      I was intrigued by the concept of creating extremly useful tools at little to no cost.
+
+
+
+    </p>
+
+    <p class=''>
+      In my free time I like to turn to my hobbies which is best described as: "Engineering solutions
+      to chalenges and to join Bill Nye in saving the world." I am self taught full stack developer with
+      experience in creating applications and websites with the most up to date libraries.
+
+    </p>
+
+
+
+
+  </div>
+
+
+</div>
+<div id='page3' style=''>
+
+  <h1 >  Experience</h1>
+  <div class="marged">
+    <div class="block revealOnScroll" data-animation="flipInX" data-timeout="400">
+      <div class="image1"></div>
+
+    </div>
+    <div class="block revealOnScroll" data-animation="flipInX" data-timeout="400">
+      <div class="image2"></div>
+
+    </div>
+    <div class="block revealOnScroll" data-animation="flipInX" data-timeout="400">
+      <div class="image3"></div>
+
+    </div>
+  </div>
+  <table >
     <tr>
       <td>
         <div class='showOnScroll tableIcon'>
-            <i class="devicon-java-plain  "></i>
-          </div>
+          <i class="devicon-java-plain  "></i>
+        </div>
 
       </td>
-    <td>
+      <td>
 
         <p class=''>Java</p>
 
-    </td>
-    <td><img class='showOnScroll tableIcon' src='https://cdn2.iconfinder.com/data/icons/files-coding/24/files-coding-c-plus-plus-512.png'></td>
-    <td>
-      <p class=''>  C++</p>
-    </td>
-    <td>
-      <img class='showOnScroll tableIcon' src='http://dronekit.io/assets/Python-logo-notext-9d418c4111825093b52777e028c2315f.svg'>
-    </td>
-    <td>
-      <p class=''>Python</p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-    <img class='showOnScroll tableIcon' src='http://i.imgur.com/8n1sr.png'>
-  </td>
-  <td>
-      <p class=''>  Matlab</p>
+      </td>
+      <td><img class='showOnScroll tableIcon' src='https://cdn2.iconfinder.com/data/icons/files-coding/24/files-coding-c-plus-plus-512.png'></td>
+      <td>
+        <p class=''>  C++</p>
+      </td>
+      <td>
+        <img class='showOnScroll tableIcon' src='http://dronekit.io/assets/Python-logo-notext-9d418c4111825093b52777e028c2315f.svg'>
+      </td>
+      <td>
+        <p class=''>Python</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img class='showOnScroll tableIcon' src='http://i.imgur.com/8n1sr.png'>
+      </td>
+      <td>
+        <p class=''>  Matlab</p>
 
-  </td>
+      </td>
 
-  <td>
-    <div class='showOnScroll tableIcon'>
-        <i class="devicon-c-plain"></i>
-      </div>
-  </td>
-  <td>
+      <td>
+        <div class='showOnScroll tableIcon'>
+          <i class="devicon-c-plain"></i>
+        </div>
+      </td>
+      <td>
 
-    <p class=''>C</p>
-  </td>
-  <td>
-    <i class="showOnScroll tableIcon fa fa-database " style='font-size:35px;' aria-hidden="true"></i>
-  </td>
-  <td>
-    <p class=''> DataBase</p>
-      <ul class='table-list'>  <li >NoSQL</li>   <li>MongoDB</li> </ul>
-  </td>
-</tr>
+        <p class=''>C</p>
+      </td>
+      <td>
+        <i class="showOnScroll tableIcon fa fa-database " style='font-size:35px;' aria-hidden="true"></i>
+      </td>
+      <td>
+        <p class=''> DataBase</p>
+        <ul class='table-list'>  <li >NoSQL</li>   <li>MongoDB</li> </ul>
+      </td>
+    </tr>
 
-<tr>
-  <td>
-  <i class="showOnScroll tableIcon fa fa-html5 " style='font-size:35px;' aria-hidden="true"></i>
-  </td>
-  <td>
-    <p class=''>HTML5</p>
-  </td>
-  <td>
-    <i class="showOnScroll tableIcon fa fa-css3 " style='font-size:35px;' aria-hidden="true"></i>
-  </td>
-<td>
-  <p class=''>CSS3</p>
-</td>
-<td>
-      <img class='showOnScroll tableIcon' style='width:50px;'src='./images/react.png'/>
-</td>
-<td>
-  <p class=''> React-Redux</p>
+    <tr>
+      <td>
+        <i class="showOnScroll tableIcon fa fa-html5 " style='font-size:35px;' aria-hidden="true"></i>
+      </td>
+      <td>
+        <p class=''>HTML5</p>
+      </td>
+      <td>
+        <i class="showOnScroll tableIcon fa fa-css3 " style='font-size:35px;' aria-hidden="true"></i>
+      </td>
+      <td>
+        <p class=''>CSS3</p>
+      </td>
+      <td>
+        <img class='showOnScroll tableIcon' style='width:50px;'src='./images/react.png'/>
+      </td>
+      <td>
+        <p class=''> React-Redux</p>
 
-</td>
-</tr>
-</table>
+      </td>
+    </tr>
+  </table>
   <a href='/projects'>  <h2> See More Projects Here </h2> </a>
 
-  </div>
+</div>
 
-  <div id='projects'>
+<div id='projects'>
 
-      <h1 >  Projects</h1>
-    <div class="grid">
+  <h1 style='color:black;' >  Projects</h1>
+  <div id='projectShowcase' class="grid">
 
-  <div class="grid-sizer"></div>
+    <div class="grid-sizer"></div>
 
 
-  <div class="grid-item ">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="Avatar" class="image">
-    <div class="overlay">
-      <div class="text">Tuck My</div>
-    </div>
-  </div>
-  <div class="grid-item ">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="Avatar" class="image">
-    <div class="overlay2">
-      <div class="text">Dick! </div>
-    </div>
-  </div>
 
-  <div class="grid-item">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
-  </div>
-  <div class="grid-item">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
-  </div>
-  <div class="grid-item">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
-  </div>
-  <div class="grid-item">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
-  </div>
-  <div class="grid-item">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
-  </div>
-  <div class="grid-item">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
-  </div>
-  <div class="grid-item">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
-  </div>
-
+    <a href='http://pintrest-clone-malchemist.herokuapp.com' target='_blank'><div  data-animation="flipInY" class="grid-item  revealOnScroll " data-timout='800'>
+      <img   src="./images/pintrest-clone.png" alt="Avatar" class="image">
+      <div class="overlay2">
+        <div class="text">
+          <h3>Pintrest Clone </h3>
+        </div>
+        <div class='text-body'>
+          <p>This app uses React-redux,MongoDb, and authentication server to allow user post,remove, and like photos from all around the world.</p>
+        </div>
+      </div>
+    </div></a>
+    <a href='http://book-club-m-alchemist.herokuapp.com' target='_blank'><div  data-animation="flipInY" class="grid-item  revealOnScroll " data-timout='800'>
+      <img src="https://ae01.alicdn.com/kf/HTB18yb5JVXXXXbjXXXXq6xXFXXXh/Photo-Backdrops-Children-Vinyl-Photo-Props-for-Studio-Photography-font-b-Background-b-font-font-b.jpg"
+      alt="Avatar" class="image">
+      <div class="overlay2">
+        <div class="text">
+          <h3>Book Trading Club</h3>
+        </div>
+        <div class='text-body'>
+          <p>This app utizes React-Redux, authentication, and Mongodb to allow people around the world to trade books.</p>
+        </div>
       </div>
 
 
+    </div></a>
+    <a href='http://malchemist-voting-app.herokuapp.com' target='_blank'><div  data-animation="flipInY" class="grid-item  revealOnScroll " data-timout='800'>
+      <img src="http://www.lwtg.net/wp-content/uploads/2014/04/pencil_drawing_blue_check_mark_image_500_clr-e1398838104732.png" alt="Avatar" class="image">
+      <div class="overlay2">
+        <div class="text">
+          <h3>Voting App </h3>
+        </div>
+        <div class='text-body'>
+          <p>This app uses MongoDb to allow user to create polls for others to vote.</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <a href='https://stock-watcher-app-malchemist.herokuapp.com' target='_blank'><div  data-animation="flipInY" class="grid-item  revealOnScroll " data-timout='800'>
+      <img src="./images/stock-app.png"
+      alt="Avatar" class="image">
+      <div class="overlay2">
+        <div class="text">
+          <h3>Stock Market </h3>
+        </div>
+        <div class='text-body'>
+          <p>This app uses is a live app that utilizes SocketIO,React-Redux, and MongoDb to allow user to chart their favorite stocks.</p>
+        </div>
+      </div>
+    </div></a>
+
+    <a href='http://weather-app-malchemist.herokuapp.com' target='_blank'><div  data-animation="flipInY" class="grid-item  revealOnScroll " data-timout='800'>
+      <img src="./images/weather-app.png"
+      alt="Avatar" class="image">
+      <div class="overlay2">
+        <div class="text">
+          <h3>Weather App </h3>
+        </div>
+        <div class='text-body'>
+          <p>This simple app uses react-redux and a Google Map API to allows users to compare the weather in the favorite cities.</p>
+        </div>
+      </div>
+    </div></a>
+    <a href='http://youtube-clone-m-alchemist.herokuapp.com' target='_blank'><div  data-animation="flipInY" class="grid-item  revealOnScroll " data-timout='800'>
+      <img src="./images/youtube.jpg"
+      alt="Avatar" class="image">
+      <div class="overlay2">
+        <div class="text">
+          <h3>Weather App </h3>
+        </div>
+        <div class='text-body'>
+          <p>This simple app uses react-redux and a Youtube API to allows users watch their favorite youtube videos.</p>
+        </div>
+      </div>
+    </div></a>
 
   </div>
-  <div id="page4" class="">
+  <div id='extraProjects' style='margin-bottom:50px;' class="grid">
+
+    <div class="grid-sizer"></div>
+    <div  data-animation="flipInY" class="grid-item  revealOnScroll " data-timout='800'>
+      <img src="./images/weather-app.png"
+      alt="Avatar" class="image">
+      <div class="overlay2">
+        <div class="text">
+          <h3>Weather App </h3>
+        </div>
+        <div class='text-body'>
+          <p>This simple app uses react-redux and a Google Map API to allows users to compare the weather in the favorite cities.</p>
+        </div>
+      </div>
+    </div>
+    <div  data-animation="flipInY" class="grid-item  revealOnScroll " data-timout='800'>
+      <img src="./images/youtube.jpg"
+      alt="Avatar" class="image">
+      <div class="overlay2">
+        <div class="text">
+          <h3>Weather App </h3>
+        </div>
+        <div class='text-body'>
+          <p>This simple app uses react-redux and a Youtube API to allows users watch their favorite youtube videos.</p>
+        </div>
+      </div>
+    </div>
+
+
+</div>
+
+      <div style='text-align:center; margin-top:10px;'>  <button class='button submit-button ' id='loadMoreButton'   >Load More</button></div>
+</div>
+
+
+
+
+<div id="page4" class="">
 
 
   <h1  style=''class="text-center  "> Connect <h1/>
 
 
- <div class='text-center'>
-   <div>
+    <div class='text-center'>
+      <div>
 
- <form action="/contactus" method="post">
-
-
-  <div class="group" >
-    <input type="text" name="name" required>
-    <span class="highlight"></span>
-    <span class="bar"></span>
-    <label>Name</label>
-  </div>
-  <div class="group">
-    <input type="text" name="subject" required>
-    <span class="highlight"></span>
-    <span class="bar"></span>
-    <label>Subject</label>
-  </div>
-
-  <div class="group">
-    <input type="text" name="email" required>
-    <span class="highlight"></span>
-    <span class="bar"></span>
-    <label>Email</label>
-  </div>
-
- <textarea rows="5" name="message" cols="30"  placeholder="Write your message..." required></textarea>
- <button class='button submit-button ' type="submit" style='margin:0px;' >Submit</button>
- </form>
-
-   </div>
+        <form action="/contactus" method="post">
 
 
-  <div class='glow2' style="margin:20px;font-size:40px;">
-    <a href='https://www.linkedin.com/in/mohamed-al-khamees-182244b0/'><i class="fa fa-linkedin" aria-hidden="true" style="font-size:30px;"></i></a>
-    <a href='https://twitter.com/moalkhamees'><i class="fa fa-twitter" ></i></a>
-    <a href='https://github.com/m-alchemist'><i class="fa fa-github"></i></a>
-    <a ='https://www.facebook.com/profile.php?id=100012580410738'>  <i class="fa fa-facebook-f"></i></a>
-  </div>
+          <div class="group" >
+            <input type="text" name="name" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Name</label>
+          </div>
+          <div class="group">
+            <input type="text" name="subject" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Subject</label>
+          </div>
 
-  <p class='text-center text-danger' style='font-size:20px;margin-top: 20px;'>
-    by m-alchemist
-  </p>
+          <div class="group">
+            <input type="text" name="email" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Email</label>
+          </div>
 
-        </div>
+          <textarea rows="5" name="message" cols="30"  style='margin-bottom:0px;' placeholder="Write your message..." required></textarea>
+          <button class='button submit-button ' type="submit" style='margin:0px;' >Submit</button>
+        </form>
+
       </div>
+
+
+      <div class='glow2' style="margin:20px;font-size:40px;">
+        <a href='https://www.linkedin.com/in/mohamed-al-khamees-182244b0/'><i class="fa fa-linkedin" aria-hidden="true" style="font-size:30px;"></i></a>
+        <a href='https://twitter.com/moalkhamees'><i class="fa fa-twitter" ></i></a>
+        <a href='https://github.com/m-alchemist'><i class="fa fa-github"></i></a>
+        <a ='https://www.facebook.com/profile.php?id=100012580410738'>  <i class="fa fa-facebook-f"></i></a>
+      </div>
+
+      <p class='text-center text-danger' style='font-size:20px;margin-top: 20px;'>
+        by m-alchemist
+      </p>
+
+    </div>
+  </div>
 
 
 
